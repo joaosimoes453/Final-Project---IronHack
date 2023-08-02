@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Let's make money</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            background-image: url("https://www.sumaya.pt/i/sumaya-569076/3/6/0/4/9/5/1/5/1/3/3/3/3/1673452270_162/32c47ed0c413c9ff3cdf3bbe798578df.jpg");
+            background-size: cover;
+            background-position: center;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        form {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.8);
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        h1, p {
+            text-align: center;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .result-section {
+            margin-top: 20px;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .links a {
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 5px 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-bottom: 10px;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+    </style>
+<head>
+    <style>
+        .container {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: rgba(0, 0, 0, 0.7);
+            font-family: Helvetica, Arial, sans-serif;
+        }
+        .container a {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+        .container a:active {
+            color: #FFFFFF;
+}
+    </style>
+</head>
+</body>
+<div class="links">
+    <a href="/">Back to Main Page</a>
+</div>
+    <div class="container">
+        <a href="/atalho_real">Atalho Real</a><br>
+        <a href="/atalho_mercado">Atalho do Mercado</a><br>
+        <a href="/atalho_alvalade">Atalho de Alvalade</a><br>
+        <a href="/sumaya">Sumaya</a><br>
+    </div>
+
+
+    <div class="result-section">
+        <form action="/run_code" method="post">
+            <input type="hidden" name="restaurant" value="{{restaurant}}">
+
+            <label for="product">Product:</label>
+            <input type="text" name="product" id="product" required>
+
+            <label for="month">Month:</label>
+            <input type="text" name="month" id="month" required>
+
+            <label for="year">Year:</label>
+            <input type="text" name="year" id="year" required>
+
+            <input type="submit" value="Run Code">
+        </form>
+
+        <h1>Result</h1>
+        <p>{{ result | safe}}</p>
+    </div>
+</body>
+<!DOCTYPE html>
+<html>
